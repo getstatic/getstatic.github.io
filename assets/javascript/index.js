@@ -34,11 +34,11 @@ jQuery(document).ready(function ($) {
         $(this).addClass('is-active');
     });
 
-    $(function () {
-        if (location.pathname.split("/")[1] !== "") {
-            $('#nav-menu a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('is-active');
-        }
-    });
+    // $(function() {
+    //     if ((location.pathname.split("/")[1]) !== ""){
+    //         $('#nav-menu a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('is-active');
+    //     }
+    // });
 
     /**
          * This part handles the highlighting functionality.
@@ -49,10 +49,10 @@ jQuery(document).ready(function ($) {
     var aArray = []; // create the empty aArray
     for (var i = 0; i < aChildren.length; i++) {
         var aChild = aChildren[i];
-        var ahref = $(aChild).attr('href'),
-            parts = ahref.split('/'),
-            target = parts[3];
-        aArray.push(target);
+        var ahref = $(aChild).attr('href');
+        // parts = ahref.split('/'),
+        // target = parts[3];
+        aArray.push(ahref);
     } // this for loop fills the aArray with attribute href values
 
     $(window).scroll(function () {
@@ -62,23 +62,49 @@ jQuery(document).ready(function ($) {
 
         for (var i = 0; i < aArray.length; i++) {
             var theID = aArray[i];
-            var theURL = "https://getstatic.github.io/";
             var divPos = $(theID).offset().top - 80; // get the offset of the div from the top of page
             var divHeight = $(theID).height(); // get the height of the div in question
             if (windowPos >= divPos && windowPos < divPos + divHeight) {
-                $("a[href='" + theURL + theID + "']").addClass("is-active");
+                $("a[href='" + theID + "']").addClass("is-active");
             } else {
-                $("a[href='" + theURL + theID + "']").removeClass("is-active");
+                $("a[href='" + theID + "']").removeClass("is-active");
             }
         }
 
         if (windowPos + windowHeight == docHeight) {
             if (!$("#nav-menu:last-child a").hasClass("is-active")) {
                 var navActiveCurrent = $(".is-active").attr("href");
-                $("a[href='" + theURL + navActiveCurrent + "']").removeClass("is-active");
+                $("a[href='" + navActiveCurrent + "']").removeClass("is-active");
                 $("#nav-menu a.contact").addClass("is-active");
             }
         }
     });
 });
+
+// $(window).scroll(function(){
+//     var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+//     var windowHeight = $(window).height(); // get the height of the window
+//     var docHeight = $(document).height();
+
+//     for (var i=0; i < aArray.length; i++) {
+//         var theID = aArray[i];
+//         var theURL = "https://getstatic.github.io/"
+//         var divPos = $(theID).offset().top - 80; // get the offset of the div from the top of page
+//         var divHeight = $(theID).height(); // get the height of the div in question
+//         if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+//             $("a[href='" + theURL + theID + "']").addClass("is-active");
+
+//         } else {
+//             $("a[href='" + theURL + theID + "']").removeClass("is-active");
+//         }
+//     }
+
+//     if(windowPos + windowHeight == docHeight) {
+//         if (!$("#nav-menu:last-child a").hasClass("is-active")) {
+//             var navActiveCurrent = $(".is-active").attr("href");
+//             $("a[href='" + theURL + navActiveCurrent + "']").removeClass("is-active");
+//             $("#nav-menu a.contact").addClass("is-active");
+//         }
+//     }
+// });
 //# sourceMappingURL=index.js.map
