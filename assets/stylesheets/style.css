@@ -3983,6 +3983,9 @@ body {
 .nav-menu {
   align-items: center; }
 
+.nav .container {
+  border-bottom: 1px solid #0a0a0a; }
+
 .hamburger, .nav-toggle {
   height: auto; }
 
@@ -4038,7 +4041,8 @@ body {
   flex: 0 1 auto; }
 
 .bottom-border {
-  border-bottom: 1px solid #0a0a0a; }
+  border-bottom: 1px solid #0a0a0a;
+  padding-bottom: 2em; }
 
 .top-border {
   border-top: 1px solid #0a0a0a;
@@ -4054,10 +4058,14 @@ body {
   color: DarkSeaGreen; }
 
 .paper {
-  box-shadow: 4px 7px 21px -13px rgba(0, 0, 0, 0.75); }
+  box-shadow: 4px 7px 21px -13px rgba(0, 0, 0, 0.75);
+  margin-top: 1em; }
 
 .note {
-  margin-bottom: 4em; }
+  margin: 2em 0 4em; }
+
+.single-work {
+  margin-bottom: 3em; }
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
