@@ -62,7 +62,7 @@ jQuery(document).ready(function ($) {
 
         for (var i = 0; i < aArray.length; i++) {
             var theID = aArray[i];
-            var theURL = "http://getstatic.github.io/";
+            var theURL = "https://getstatic.github.io/";
             var divPos = $(theID).offset().top - 80; // get the offset of the div from the top of page
             var divHeight = $(theID).height(); // get the height of the div in question
             if (windowPos >= divPos && windowPos < divPos + divHeight) {
