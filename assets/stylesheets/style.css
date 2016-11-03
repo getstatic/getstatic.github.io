@@ -3929,11 +3929,12 @@ body {
     -ms-hyphens: auto;
     hyphens: auto;
 }*/
-.image-link:hover {
+.work-image:hover {
   border-bottom: 4px solid #8FBC8B;
   padding-bottom: 0; }
 
-.image-link {
+.work-image {
+  height: 210px;
   padding-bottom: 4px; }
 
 .container {
@@ -3942,7 +3943,7 @@ body {
 .sans-serif {
   font-family: "Source Sans Pro", sans-serif; }
 
-.monospace-font {
+.monospace {
   font-family: "Source Code Pro", mono; }
 
 .light {
@@ -4069,6 +4070,9 @@ body {
 
 .single-work {
   margin-bottom: 3em; }
+
+.tags {
+  margin-top: 1em; }
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
