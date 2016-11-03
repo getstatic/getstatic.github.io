@@ -3965,7 +3965,9 @@ body {
   text-shadow: 2px 2px 2px #212121; }
 
 .logo {
-  margin: 0.5em 0.5em 0.5em 0; }
+  margin: 0.5em 0.5em 0.5em 0;
+  letter-spacing: 0.075em;
+  -letter-kern: 2px 0 -1px 2px 10px 0 0 1px 1px 0 0 0; }
 
 .title {
   font-family: "Source Sans Pro", sans-serif;
@@ -4069,11 +4071,23 @@ body {
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
+@media only screen and (min-width: 200px) {
+  .logo {
+    font-size: .6em; } }
+
+@media only screen and (min-width: 380px) {
+  .logo {
+    font-size: .8em; } }
+
 /* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .logo {
+    font-size: 1em; } }
+
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   .logo {
-    font-size: .9em; } }
+    font-size: 1em; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
